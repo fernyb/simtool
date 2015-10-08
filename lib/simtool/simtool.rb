@@ -16,7 +16,8 @@ module Simtool
 
     def setup
       self.developer_dir = `xcode-select -p`.chomp
-      self.simctl = File.join(developer_dir, 'Platforms/iPhoneSimulator.platform/Developer/usr/bin/simctl')
+      #self.simctl = File.join(developer_dir, 'Platforms/iPhoneSimulator.platform/Developer/usr/bin/simctl')
+      self.simctl = "xcrun simctl"
       self.get_devices
       self.detect_booted_device
     end
